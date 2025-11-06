@@ -9,9 +9,8 @@ This project explores how ideas from statistical physics, specifically the Ising
 **The (loosely) planned directory structure is as follows:** 
 <pre> 
     /README.md 
-    /Ising.py        #simulation of the 2D Ising model using metropolis alogorithm
-    /HNN.py          #implementation of the HNN, with Hebbian and Daydreaming learning rules 
-    /PNN.py          #implementation of the PNN, with and without daydreaming learning rule
+    /Ising.ipynb     #simulation of the 2D Ising model using metropolis alogorithm
+    /HNN.ipynb       #implementation of the HNN, with Hebbian and Daydreaming learning rules 
     /viz.py          #functions for visualizing/plotting spin configurations, energy landscape, and memory retrieval
     /ref_data.py     #reference data for test/train, either imported or hardcoded
     /results.ipynb   #jupyter notebook displaying overall results 
@@ -21,19 +20,18 @@ This project explores how ideas from statistical physics, specifically the Ising
 - Ising Model Implementation:
    - Simulate the 2D Ising model using the Metropolis algorithm.
    - Visualize spin configurations and compute magnetization vs. temperature to observe the critical phase transition.
-   - Explore how an external magnetic field affects magnetization.
+   - Explore different geometric configurations.
 - Hopfield Network (2-state Ising analogue):
    - Implement a HNN using the Hebbian learning rule.
    - Study/Visualize memory retrieval dynamics and explore energy landscape convergence.
    - Incorporate the Daydreaming learning rule to reduce spurious attractors and enhance memory capacity.
-- Potts Neural Network (p-state generalization):
-   - Extend HNN to multi-state neurons.
-   - Study/Visualize memory retrieval dynamics and explore energy landscape convergence.
-   - Incorporate the Daydreaming learning rule
+
 
 **Planned contributions of each team member:**
-tbd
+Nancy: Implement base square ising model, implement daydreaming learning method on hopfield network
+Sam: Implement triangular ising model, implement base hopfield network
+Shivam: Implement hexagonal ising model, implement visulaization classes
 
 **Additional notes:**
-None at present.    
+If time permits, we may also implement the Potts model with and without the daydreaming algorithm.     
     
