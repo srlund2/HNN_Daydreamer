@@ -1,7 +1,7 @@
 ## Comp Phys Project, group G
 
 **Project title:** 
-Something like "Physics inspired biological neural network" or maybe something silly like "Ising on cake and other Hopfield daydreams".
+Something serious like "Physics inspired biological neural network" or maybe something silly like "Ising on cake and other Hopfield daydreams".
 
 **Project Description:**
 This project explores how ideas from statistical physics, specifically the Ising model, have inspired the development of associative neural networks such as the Hopfield Neural Network (HNN). Our project aims to connect physical models of interacting spins to computational models of memory and learning. We will demonstrate the analogy between physical systems and neural computation by evolving the Ising model and HNN using the Metropolis algorithm and analyzing their energy landscapes, critical phenomena, and pattern retrieval. We will then incorporate a recent “Daydreaming” learning rule (as described in https://www.sciencedirect.com/science/article/pii/S0893608025000954) to examine how it enhances memory capacity, improves pattern retrieval, and changes the energy landscape. 
@@ -27,9 +27,9 @@ This project explores how ideas from statistical physics, specifically the Ising
    - Incorporate the Daydreaming learning rule to reduce spurious attractors and enhance memory capacity.
 
 
-**Planned contributions of each team member:**
-Nancy: Implement base square ising model, implement daydreaming learning method on hopfield network
-Sam: Implement triangular ising model, implement base hopfield network
+**Planned contributions of each team member:**\
+Nancy: Implement base square ising model, implement daydreaming learning method on hopfield network\
+Sam: Implement triangular ising model, implement base hopfield network\
 Shivam: Implement hexagonal ising model, implement visulaization classes
 
 **Additional notes:**
