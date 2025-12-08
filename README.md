@@ -1,37 +1,29 @@
 ## Comp Phys Project, group G
 
-**Project title:** 
-Something serious like "Physics inspired biological neural network" or maybe something silly like "Ising on cake and other Hopfield daydreams".
+**Ising on cake (and other Hopfield daydreams)** 
+An analysis of the simplfied Ising model on square, triangular, and hexagonal lattices without an external field. A square lattice implementaiton with an external field is also used. We demonstrate the analogy between physical systems and neural computation by evolving the Ising model using the Metropolis algorithm, thus inducing a noise-type temperature dependence, and analyzing the energy landscapes and critical phenomena.
 
-**Project Description:**
-This project explores how ideas from statistical physics, specifically the Ising model, have inspired the development of associative neural networks such as the Hopfield Neural Network (HNN). Our project aims to connect physical models of interacting spins to computational models of memory and learning. We will demonstrate the analogy between physical systems and neural computation by evolving the Ising model and HNN using the Metropolis algorithm and analyzing their energy landscapes, critical phenomena, and pattern retrieval. We will then incorporate a recent “Daydreaming” learning rule (as described in https://www.sciencedirect.com/science/article/pii/S0893608025000954) to examine how it enhances memory capacity, improves pattern retrieval, and changes the energy landscape. 
+The simplified Ising model is defined by the Hamiltonian:
+$E = -J \sum_(<i, j>) s_i s_j - H \sum_i s_i$
+
+Additionally, the 2D analog of the Ising model---the hopfield nueral network (HNN)---is implemented and tested on handwritten digits and salt and pepper images. The "daydreaming" algorithm (https://www.sciencedirect.com/science/article/pii/S0893608025000954)---a learning rule to increase memory capacity---is implemented. We compare this daydreaming algorithm's pattern retrieval abilities with a standard Hebbian rule HNN.
+
    
-**The (loosely) planned directory structure is as follows:** 
+**The directory structure is as follows:** 
 <pre> 
     /README.md 
-    /Ising.ipynb     #simulation of the 2D Ising model using metropolis alogorithm
-    /HNN.ipynb       #implementation of the HNN, with Hebbian and Daydreaming learning rules 
-    /viz.py          #functions for visualizing/plotting spin configurations, energy landscape, and memory retrieval
-    /ref_data.py     #reference data for test/train, either imported or hardcoded
-    /results.ipynb   #jupyter notebook displaying overall results 
+    /Ising_with_numpy.ipynb     #simulation of the 2D Ising model using metropolis alogorithm. Implemented in numpy, on square, triangular, and hexagonal lattices. 
+    /Ising_with_networkx.ipynb       #simulation of the 2D Ising model implemented using the networkx and graphviz packages, for improved visualization.
+    /Ising_in_external_field.ipynb     #simulation of the 2D Ising model on a square lattice, with a time and position dependent external magnetic field.
+    /hopfield_daydreaming.ipynb     #implementation of the HNN, with Hebbian and Daydreaming learning rules 
 </pre>
+Each file is a jupyter notebook, to provide maximum flexibility for users. Further details on the contents of each file can be found in a markdown box at the begining of each. 
 
-**Chronological steps to complete the project:** 
-- Ising Model Implementation:
-   - Simulate the 2D Ising model using the Metropolis algorithm.
-   - Visualize spin configurations and compute magnetization vs. temperature to observe the critical phase transition.
-   - Explore different geometric configurations.
-- Hopfield Network (2-state Ising analogue):
-   - Implement a HNN using the Hebbian learning rule.
-   - Study/Visualize memory retrieval dynamics and explore energy landscape convergence.
-   - Incorporate the Daydreaming learning rule to reduce spurious attractors and enhance memory capacity.
+**Signifigant results:**
+We found that our simmulated Ising model phase transitions agreed with the theoretical predictions for the value of $T_C$, to within 0.2 T (J/K). More intensive simulations could be run by increasing the runs averaged over, the number of steps per run, and the lattice size of the simulation.\
+We also found that with an external field, the square Ising model behaves as expected, following the magnetic field spatially or temporally, with some noise and lag.\  
+A presentation detialing the major fidnings and basic theory of the implementation can be found at https://docs.google.com/presentation/d/1TGY32IlcQUvz-I5vmVRkyGaN0YJjL7VBd71pUhsn8ig/edit?usp=sharing. 
 
-
-**Planned contributions of each team member:**\
-Nancy: Implement base square ising model, implement daydreaming learning method on hopfield network\
-Sam: Implement triangular ising model, implement base hopfield network\
-Shivam: Implement hexagonal ising model, implement visulaization classes
-
-**Additional notes:**
-If time permits, we may also implement the Potts model with and without the daydreaming algorithm.     
+**Future iterations:**
+To expand this project, the hopfield neural net could be further tested with more complicated images, to see how HNN performs on more or less correlated data when compared with the daydreaming learning rule. Other neural nets, such as the Potts neural net, could aslo be implement with and without the daydreaming learning rule.
     
